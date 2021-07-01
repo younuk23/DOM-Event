@@ -23,6 +23,29 @@
       }
     </style>
     <script>
+      const loginBtn = document.getElementsByClassName("login-btn")[0];
+
+      loginBtn.addEventListener("click", function () {
+        const password = document.getElementById("password").value;
+        const rePassword = document.getElementById("re-password").value;
+
+        if (!password) {
+          alert("비밀번호를 입력해주세요!");
+          return;
+        }
+
+        if (!rePassword) {
+          alert("비밀번호 확인을 입력해주세요!");
+          return;
+        }
+
+        if (password !== rePassword) {
+          alert("비밀번호가 맞지 않습니다!");
+          return;
+        }
+
+        alert("회원가입 성공!!");
+      });
     </script>
   </body>
 </html>
